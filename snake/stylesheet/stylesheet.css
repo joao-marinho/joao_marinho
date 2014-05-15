@@ -1,0 +1,23 @@
+* {
+}
+
+.canvas {
+  width: 1000px;
+  height: 1000px;
+}
+
+.pixel {
+  height: 50px;
+  width: 50px;
+  float: left;
+  background-color: blueviolet;
+  box-sizing: border-box;
+}
+
+.comida {
+  background-color: green;
+}
+
+.cobra {
+  background-color: red;
+}
