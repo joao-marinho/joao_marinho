@@ -22,14 +22,8 @@ class JellyBean < Dessert
   end
 
   attr_accessor :flavor
-  
+
   def delicious?
     @flavor != "black licorice"
   end
 end
-
-a = JellyBean.new("Loucura", 100, "black")
-p a.healthy?, a.delicious?
-a.calories = 1000
-a.flavor = "black licorice"
-p a.healthy?, a.delicious?
