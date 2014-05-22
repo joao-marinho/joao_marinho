@@ -17,10 +17,8 @@ def rps_game_winner(game)
   raise NoSuchStrategyError unless strategyExists?(game[0][1]) && strategyExists?(game[1][1])
 
   if secondIsBetter?(game[0][1], game[1][1])
-    game[1] 
-  else 
+    game[1]
+  else
     game[0]
   end
 end
-
-p rps_game_winner([ [ "Armando", "S" ], [ "Dave", "P" ] ])
