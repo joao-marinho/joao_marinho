@@ -14,8 +14,3 @@ class Dessert
     true
   end
 end
-
-a = Dessert.new("Loucura", 100)
-p a.healthy?, a.delicious?
-a.calories = 1000
-p a.healthy?, a.delicious?
