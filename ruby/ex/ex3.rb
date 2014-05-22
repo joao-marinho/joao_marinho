@@ -5,5 +5,3 @@ end
 def sortLetters(word)
   word.split(//).sort.join
 end
-
-p combine_anagrams(['cars', 'for', 'potatoes', 'racs', 'four','scar', 'creams', 'scream'])
