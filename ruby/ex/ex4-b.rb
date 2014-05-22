@@ -1,19 +1,4 @@
-class Dessert
-  def initialize(name, calories)
-    @name = name
-    @calories = calories
-  end
-
-  attr_accessor :name
-  attr_accessor :calories
-
-  def healthy?
-    @calories < 200
-  end
-  def delicious?
-    true
-  end
-end
+require_relative 'ex4-a.rb'
 
 class JellyBean < Dessert
   def initialize(name, calories, flavor)
