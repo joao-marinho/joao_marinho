@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), "../ex2-a.rb");
+require File.join(File.dirname(__FILE__), "../ex2-a.rb")
 
 describe "strategyExists?" do
   it "return true for P" do
