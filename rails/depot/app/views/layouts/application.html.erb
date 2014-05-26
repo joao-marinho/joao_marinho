@@ -11,7 +11,7 @@
     <%= image_tag("logo.png") %>
     <%= @page_title || "Pragmatic Bookshelf" %>
   </div>
-  <div class="columns">
+  <div id="columns">
     <div id="side">
       <ul>
         <li><a href="localhost:3000"> Home </a></li>
@@ -20,7 +20,7 @@
         <li><a href="localhost:3000/contact"> Contact </a></li>
       </ul>
     </div>
-    <div class="main">
+    <div id="main">
       <%= yield %>
     </div>
   </div>
