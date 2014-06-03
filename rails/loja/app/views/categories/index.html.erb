@@ -1,0 +1,10 @@
+<h1>Index</h1>
+<% @categories.each do |category| %>
+  <h2> <%= category.title %> </h2>
+  <p> <%= category.description %> <p>
+  <%= link_to 'Show', category %>
+  <%= link_to 'Edit', edit_category_path(category) %>
+  <%= link_to 'delete', category, method: :delete %>
+<% end %>
+
+<%= link_to 'New', new_category_path %>

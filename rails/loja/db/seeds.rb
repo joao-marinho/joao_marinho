@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Category.delete_all
+
+Category.create!(title: 'Legal', description: 'Grupo das pessoas legais.');
+Category.create!(title: 'Chatos', description: 'Grupo das pessoas chatas.');

@@ -1,0 +1,15 @@
+<%= form_for(@category) do |form| %>
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, :cols => 40 %>
+  </div>
+
+  <div class ="field">
+    <%= form.label :description, :style => 'float: left' %>
+    <%= form.text_area :description, :rows => 3, :cols => 40 %>
+  </div>
+
+  <div>
+    <%= form.submit 'Salvar' %>
+  </div>
+<% end %>
