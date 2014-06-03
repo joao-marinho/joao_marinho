@@ -24,8 +24,11 @@ class CategoriesController < ApplicationController
   end
 
   def update
-    @category.update(category_param)
-    redirect_to @category
+    if @category.update(category_param)
+      redirect_to @category
+    else
+      render :edit
+    end
   end
 
   def destroy

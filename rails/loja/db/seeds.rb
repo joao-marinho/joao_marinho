@@ -9,3 +9,15 @@ Category.delete_all
 
 Category.create!(title: 'Legal', description: 'Grupo das pessoas legais.');
 Category.create!(title: 'Chatos', description: 'Grupo das pessoas chatas.');
+
+Product.delete_all
+
+Product.create!(title: 'Coisa',
+  description: 'Item fundamental para humanidade.',
+  image_url: 'http://www.soqueriaentender.com.br/wp-content/uploads/2011/08/coisa.jpg',
+  price: 1.99)
+
+Product.create!(title: 'Cobol',
+  description: 'Linguagem do passado, presente e futuro.',
+  image_url: 'http://www.novidadesdeinformatica.com.br/wp-content/uploads/2011/04/Cobol.gif',
+  price: 1999999.99)

@@ -11,11 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140603141819) do
+ActiveRecord::Schema.define(version: 20140603185334) do
 
   create_table "categories", force: true do |t|
     t.string "title"
     t.text   "description"
+  end
+
+  create_table "categories_products", id: false, force: true do |t|
+    t.integer "category_id"
+    t.integer "product_id"
+  end
+
+  add_index "categories_products", ["category_id", "product_id"], name: "index_categories_products_on_category_id_and_product_id"
+
+  create_table "products", force: true do |t|
+    t.string  "title"
+    t.text    "description"
+    t.string  "image_url"
+    t.decimal "price",       precision: 8, scale: 2
   end
 
 end

@@ -6,9 +6,22 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class= '<%= controller.controller_name %>' >
+<div class="header">
+  <h1>Loja</h1>
+  <h2><%= controller.controller_name %></h2>
+</div>
 
-<%= yield %>
+<div class="columns">
+  <div class="side">
+    <%= link_to 'Products', products_path %>
+    <br/>
+    <%= link_to 'Categories', categories_path %>
+  </div>
+  <div class="main">
+    <%= yield %>
+  </div>
+</div>
 
 </body>
 </html>

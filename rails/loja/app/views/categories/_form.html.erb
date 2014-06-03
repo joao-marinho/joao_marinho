@@ -1,11 +1,22 @@
 <%= form_for(@category) do |form| %>
+  <% if @category.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@category.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @category.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :title %><br/>
     <%= form.text_field :title, :cols => 40 %>
   </div>
 
   <div class ="field">
-    <%= form.label :description, :style => 'float: left' %>
+    <%= form.label :description, :style => 'float: left' %><br/>
     <%= form.text_area :description, :rows => 3, :cols => 40 %>
   </div>
 
