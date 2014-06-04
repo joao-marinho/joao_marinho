@@ -16,19 +16,27 @@
 </head>
 <body class= '<%= controller.controller_name %>' >
 
-<div class="columns container-fluid">
-  <div class="row">
-    <div class="col-xs-3 sidebar">
-      <ul class="nav nav-sidebar nav-stacked">
-        <li class="active"><%= link_to 'Products', products_path %></li>
-        <li><%= link_to 'Categories', categories_path %></li>
-        <li><%= link_to 'Store', root_path %></li>
-      </ul>
-    </div>
-    <div class="col-xs-9 col-xs-offset-3 main">
-      <%= yield %>
+<div class="container">
+
+  <div class="jumbotron">
+    <h1> Ola Mundo </h1>
+  </div>
+
+  <div class="columns container-fluid">
+    <div class="row">
+      <div class="col-xs-3 sidebar">
+        <ul class="nav nav-sidebar nav-stacked">
+          <li class="active"><%= link_to 'Products', products_path %></li>
+          <li><%= link_to 'Categories', categories_path %></li>
+          <li><%= link_to 'Store', root_path %></li>
+        </ul>
+      </div>
+      <div class="col-xs-9 main">
+        <%= yield %>
+      </div>
     </div>
   </div>
+
 </div>
 
 </body>

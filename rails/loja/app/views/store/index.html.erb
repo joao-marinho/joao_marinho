@@ -3,4 +3,6 @@
 <% @categories.each do |category| %>
   <%= link_to category.title, root_path(category_id: category.id) %>
 <% end %>
+<div class="row">
 <%= render(partial: "components/product", collection: @products) %>
+</div>
