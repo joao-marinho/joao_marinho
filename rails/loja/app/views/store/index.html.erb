@@ -1,0 +1,6 @@
+<h1> Index </h1>
+<h2> Categories </h2>
+<% @categories.each do |category| %>
+  <%= link_to category.title, root_path(category_id: category.id) %>
+<% end %>
+<%= render(partial: "components/product", collection: @products) %>

@@ -7,6 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body class= '<%= controller.controller_name %>' >
+
+
+
+
 <div class="header">
   <h1>Loja</h1>
   <h2><%= controller.controller_name %></h2>
@@ -17,6 +21,9 @@
     <%= link_to 'Products', products_path %>
     <br/>
     <%= link_to 'Categories', categories_path %>
+    <br/>
+    <%= link_to 'Store', root_path %>
+
   </div>
   <div class="main">
     <%= yield %>
