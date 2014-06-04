@@ -13,42 +13,14 @@
  *= require_tree .
  *= require_self
  */
- .header {
-  background: #9c9;
-  padding: 10px;
-  border-bottom: 2px solid;
-  font: small-caps 40px/40px "Times New Roman", serif;
-  color: #282;
-  text-align: center;
-
-  img {
-    float: left;
-  }
+.sidebar {
+  position: fixed !important;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  background-color: #f5f5f5;
+  border-right: 1px solid #eee;
 }
-
-.notice {
-  color: #000 !important;
-  border: 2px solid red;
-  padding: 1em;
-  margin-bottom: 2em;
-  background-color: #f0f0f0;
-  font: bold smaller sans-serif;
-}
-
-.columns {
-  background: #141;
-
-  .main {
-    margin-left: 23em;
-    padding: 1em;
-    background: white;
-  }
-
-  .side {
-    float: left;
-    padding: 1em 2em;
-    width: 19em;
-    background: #141;
-  }
-}
-

@@ -15,22 +15,19 @@
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </head>
 <body class= '<%= controller.controller_name %>' >
-<div class="header">
-  <h1>Loja</h1>
-  <h2><%= controller.controller_name %></h2>
-</div>
 
-<div class="columns">
-  <div class="side">
-    <%= link_to 'Products', products_path %>
-    <br/>
-    <%= link_to 'Categories', categories_path %>
-    <br/>
-    <%= link_to 'Store', root_path %>
-
-  </div>
-  <div class="main">
-    <%= yield %>
+<div class="columns container-fluid">
+  <div class="row">
+    <div class="col-xs-3 sidebar">
+      <ul class="nav nav-sidebar nav-stacked">
+        <li class="active"><%= link_to 'Products', products_path %></li>
+        <li><%= link_to 'Categories', categories_path %></li>
+        <li><%= link_to 'Store', root_path %></li>
+      </ul>
+    </div>
+    <div class="col-xs-9 col-xs-offset-3 main">
+      <%= yield %>
+    </div>
   </div>
 </div>
 
