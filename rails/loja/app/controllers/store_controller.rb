@@ -2,15 +2,16 @@ class StoreController < ApplicationController
   skip_before_action :authorize
   def index
     set_products
-    @categories = Category.all
   end
 
   private
   def set_products
     if exists_category_id? && category_id_valid?
       @products = products_from_category_id
+      @category_title = Category.find(params[:category_id]).title
     else
       @products = Product.all
+      @category_title = "All Products"
     end
   end
 
