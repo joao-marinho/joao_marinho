@@ -2,6 +2,7 @@
 
   <div class="col-xs-9">
     <h2> <%= group.title %> </h2>
+    <p> Has <%= pluralize(group.users.count, "user")%>. <p>
     <p> <%= group.description %> </p>
   </div>
 

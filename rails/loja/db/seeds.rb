@@ -7,8 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Category.delete_all
 
-Category.create!(title: 'Legal', description: 'Grupo das pessoas legais.');
-Category.create!(title: 'Chatos', description: 'Grupo das pessoas chatas.');
+Category.create!(title: 'Legal', description: 'Categoria das coisas legais.');
+Category.create!(title: 'Chatos', description: 'Categoria das coisas chatas.');
 
 Product.delete_all
 
@@ -21,3 +21,13 @@ Product.create!(title: 'Cobol',
   description: 'Linguagem do passado, presente e futuro.',
   image_url: 'http://www.novidadesdeinformatica.com.br/wp-content/uploads/2011/04/Cobol.gif',
   price: 1999999.99)
+
+Group.delete_all
+
+Group.create!(title: 'Legal', description: 'Grupo das pessoas legais.');
+Group.create!(title: 'Chatos', description: 'Grupo das pessoas chatas.');
+
+User.delete_all
+User.create(name: 'joao', password: '123', group_id: Group.all.first.id, password_confirmation: '123');
+
+
