@@ -19,19 +19,30 @@
 <div class="container">
 
   <div class="jumbotron">
-    <h1> Ola Mundo </h1>
+    <h1> Loja </h1>
+    <% if controller.logged? %>
+      <%= button_to 'Logout', logout_path, method: :delete %>
+    <% end %>
   </div>
 
   <div class="columns container-fluid">
     <div class="row">
       <div class="col-xs-3 sidebar">
-        <ul class="nav nav-sidebar nav-stacked">
-          <li><%= link_to 'Store', root_path %></li>
-          <li><%= link_to 'Products', products_path %></li>
-          <li><%= link_to 'Categories', categories_path %></li>
-          <li><%= link_to 'Groups', groups_path %></li>
-          <li><%= link_to 'Users', users_path %></li>
-        </ul>
+        <% if controller.logged? %>
+          <ul class="nav nav-sidebar nav-stacked">
+            <li><%= link_to 'Store', root_path %></li>
+            <li><%= link_to 'Products', products_path %></li>
+            <li><%= link_to 'Categories', categories_path %></li>
+            <li><%= link_to 'Groups', groups_path %></li>
+            <li><%= link_to 'Users', users_path %></li>
+          </ul>
+        <% else %>
+          <ul class="nav nav-sidebar nav-stacked">
+            <% Category.all.each do |category| %>
+              <li><%= link_to category.title, root_path(category_id: category.id) %></li>
+            <% end %>
+          </ul>
+        <% end %>
       </div>
       <div class="col-xs-9 main">
         <%= yield %>

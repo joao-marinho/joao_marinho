@@ -29,7 +29,11 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @user.destroy
+    begin
+      @user.destroy
+    rescue StandardError => e
+
+    end
     redirect_to users_path
   end
 
