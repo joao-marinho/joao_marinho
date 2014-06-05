@@ -1,0 +1,15 @@
+<%= form_for(@group) do |form| %>
+  <div class="field">
+    <%= form.label :title %><br/>
+    <%= form.text_field :title, size: 40 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %><br/>
+    <%= form.text_area :description, cols: 40 %>
+  </div>
+
+  <div class="action">
+    <%= form.submit %>
+  </div>
+<% end %>
