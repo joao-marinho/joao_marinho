@@ -15,6 +15,11 @@
     <%= form.password_field :password_confirmation, cols: 40 %>
   </div>
 
+  <div class="field">
+    <%= form.label :group %>
+    <%= form.collection_select :group_id, Group.all , :id, :title %>
+  </div>
+
   <div class="action">
     <%= form.submit %>
   </div>
