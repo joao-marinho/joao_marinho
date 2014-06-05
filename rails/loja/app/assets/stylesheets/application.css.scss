@@ -13,13 +13,19 @@
  *= require_tree .
  *= require_self
  */
-.sidebar {
-  top: 0;
-  bottom: 0;
-  z-index: 1000;
-  display: block;
-  overflow-x: hidden;
-  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-  background-color: #f5f5f5;
-  border-right: 1px solid #eee;
+.sidebar ul li {
+  a {
+    border-radius: 10px;
+  }
+  a:hover {
+    background-color: lightblue;
+  }
+}
+
+.header {
+  background-color: yellowgreen;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
 }

@@ -1,17 +1,28 @@
-<%= form_tag do %>
+<div class="form_loja">
 
-  <div class="field">
-    <%= label_tag :name %>
-    <%= text_field_tag :name, params[:name] %>
-  </div>
+  <%= form_tag login_path, :method => :post, :class => 'form-horizontal ' do %>
 
-  <div class="field">
-    <%= label_tag :password %>
-    <%= password_field_tag :password, params[:password] %>
-  </div>
+    <div class="form-group">
+      <%= label_tag :name, nil, class: "col-sm-2 control-label" %>
+      <div class="col-xs-10">
+        <%= text_field_tag :name, params[:name], class: "form-control" %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= submit_tag "Login" %>
-  </div>
+    <div class="form-group">
+      <%= label_tag :password, nil, class: "col-sm-2 control-label" %>
+      <div class="col-xs-10">
+        <%= password_field_tag :password, params[:password], class: "form-control"  %>
+      </div>
+    </div>
 
-<% end %>
+    <div class="form-group">
+      <div class="col-xs-offset-2 col-xs-10">
+        <%= submit_tag "Login", class: "btn btn-default" %>
+      </div>
+    </div>
+
+  <% end %>
+
+
+</div>

@@ -18,11 +18,16 @@
 
 <div class="container">
 
-  <div class="jumbotron">
-    <h1> Loja </h1>
-    <% if controller.logged? %>
-      <%= button_to 'Logout', logout_path, method: :delete %>
-    <% end %>
+  <div class="header row">
+    <div class="col-xs-3">
+      <%= image_tag "http://bodil.org/coffeescript/media/coffeescript_logo.png", class: "img-responsive logo" %>
+    </div>
+    <div class="col-xs-9">
+      <h1> Loja </h1>
+      <% if controller.logged? %>
+        <%= button_to 'Logout', logout_path, method: :delete %>
+      <% end %>
+    </div>
   </div>
 
   <div class="columns container-fluid">
