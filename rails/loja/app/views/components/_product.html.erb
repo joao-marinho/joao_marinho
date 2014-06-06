@@ -1,8 +1,8 @@
-<div class="col-xs-12 col-sm-6 col-md-4">
+<div class="col-xs-12 col-sm-6 col-md-4 product">
   <div class="thumbnail">
-    <h2> <%= product.title %> </h2>
-    <%= image_tag product.image_url, class: "img-responsive" %>
-    <p> <%= product.description %> </p>
-    <%= product.price %> <br/>
+    <h2 class="title_product"> <%= product.title %> </h2>
+    <%= image_tag product.image_url, class: "img-responsive image" %>
+    <p> <%= truncate(product.description, length: 50) %> </p>
+    <span class="price"><%= product.price %> <br/></span>
   </div>
 </div>
