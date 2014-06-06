@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-  before_action :set_categories, only: [:new, :edit]
+  before_action :set_categories, only: [:new, :edit, :update]
 
   def index
     @products = Product.all
@@ -25,9 +25,12 @@ class ProductsController < ApplicationController
   end
 
   def update
-    @product.update(product_param)
-    add_categories_from_params
-    redirect_to @product
+    if @product.update(product_param)
+      add_categories_from_params
+      redirect_to @product
+    else
+      render :edit
+    end
   end
 
   def destroy
