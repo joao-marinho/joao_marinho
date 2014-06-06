@@ -2,7 +2,7 @@
   <div class="thumbnail">
     <h2 class="title_product"> <%= product.title %> </h2>
     <%= image_tag product.image_url, class: "img-responsive image" %>
-    <p> <%= truncate(product.description, length: 50) %> </p>
+    <p class="description"> <%= truncate(product.description, length: 50) %> </p>
     <span class="price"><%= product.price %> <br/></span>
   </div>
 </div>
